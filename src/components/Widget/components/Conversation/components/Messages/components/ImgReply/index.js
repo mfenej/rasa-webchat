@@ -9,6 +9,8 @@ class ImgReply extends PureComponent {
     const { width, height } = dims;
     // Convert map to object
     const message = this.props.message.toJS();
+    const arabic = /[\u0600-\u06FF]/;
+    const rtl = this.props.message && arabic.test(this.props.message.get('title'))
     const { title, image } = message;
     const customCss = this.props.message.get('customCss') && this.props.message.get('customCss').toJS();
 
@@ -26,7 +28,7 @@ class ImgReply extends PureComponent {
           customCss.css :
           undefined }}
       >
-        <b className="rw-image-title">
+        <b className="rw-image-title" style={{direction:`${rtl?"rtl":"ltr"}`}}>
           { title }
         </b>
         <div className="rw-image-details" style={{ width, height }}>

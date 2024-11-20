@@ -13,6 +13,8 @@ class Message extends PureComponent {
     const { docViewer, linkTarget } = this.props;
     const sender = this.props.message.get('sender');
     const text = this.props.message.get('text');
+    const arabic = /[\u0600-\u06FF]/;
+    const rtl = text && arabic.test(text) 
     const customCss = this.props.message.get('customCss') && this.props.message.get('customCss').toJS();
 
     if (customCss && customCss.style === 'class') {
@@ -36,7 +38,7 @@ class Message extends PureComponent {
         className={sender === 'response' && customCss && customCss.style === 'class' ?
           `rw-response ${customCss.css}` :
           `rw-${sender}`}
-        style={style}
+        style={{...style,direction:`${rtl?"rtl":"ltr"}`}}
       >
         <div
           className="rw-message-text"

@@ -5,8 +5,10 @@ import './styles.scss';
 
 class Snippet extends PureComponent {
   render() {
+    const arabic = /[\u0600-\u06FF]/;
+    const rtl = this.props.message && arabic.test(this.props.message.get('content'))
     return (
-      <div className="rw-snippet">
+      <div className="rw-snippet" style={{direction:`${rtl?"rtl":"ltr"}`}}>
         <b className="rw-snippet-title">
           { this.props.message.get('title') }
         </b>

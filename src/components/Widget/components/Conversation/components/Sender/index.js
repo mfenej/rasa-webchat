@@ -26,9 +26,11 @@ const Sender = ({ sendMessage, inputTextFieldHint, disabledInput, userInput }) =
       formRef.current.dispatchEvent(new Event('submit', { cancelable: true }));
     }
   }
+  const arabic = /[\u0600-\u06FF]/;
+  const rtl = inputValue && arabic.test(inputValue)
   return (
     userInput === 'hide' ? <div /> : (
-      <form ref={formRef} className="rw-sender" onSubmit={handleSubmit}>
+      <form ref={formRef} className="rw-sender" onSubmit={handleSubmit} style={{direction:`${rtl?"rtl":"ltr"}`}}>
 
         <TextareaAutosize type="text" minRows={1} onKeyDown={onEnterPress} maxRows={3} onChange={handleChange} className="rw-new-message" name="message" placeholder={inputTextFieldHint} disabled={disabledInput || userInput === 'disable'} autoFocus autoComplete="off" />
         <button type="submit" className="rw-send" disabled={!(inputValue && inputValue.length > 0)}>
