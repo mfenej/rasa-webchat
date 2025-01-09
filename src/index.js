@@ -229,6 +229,7 @@ ConnectedWidget.defaultProps = {
   autoClearCache: false,
   connectOn: 'mount',
   sessionName: 'chat_session',
+  customSessionId: null,
   onSocketEvent: {},
   protocol: 'socketio',
   socketUrl: 'http://localhost',

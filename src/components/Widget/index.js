@@ -114,7 +114,7 @@ class Widget extends Component {
     const { storage } = this.props;
     // Get the local session, check if there is an existing session_id
     const localSession = getLocalSession(storage, storage.sessionName);
-    const localId = localSession ? localSession.session_id : null;
+    const localId = localSession ? storage.customSessionId : null;
     return localId;
   }
 
@@ -399,7 +399,7 @@ class Widget extends Component {
           // storage.clear();
           // Store the received session_id to storage
 
-          storeLocalSession(storage, storage.sessionName, storage.customSessionId?storage.customSessionId:remoteId);
+          storeLocalSession(storage, storage.sessionName, storage.customSessionId);
           dispatch(pullSession());
           if (sendInitPayload) {
             this.trySendInitPayload();
@@ -647,6 +647,7 @@ Widget.propTypes = {
   initialized: PropTypes.bool,
   openLauncherImage: PropTypes.string,
   sessionName: PropTypes.string,
+  customSessionId: PropTypes.string,
   closeImage: PropTypes.string,
   inputTextFieldHint: PropTypes.string,
   customComponent: PropTypes.func,
@@ -671,6 +672,7 @@ Widget.defaultProps = {
   fullScreenMode: false,
   connectOn: 'mount',
   sessionName: 'chat_session',
+  customSessionId: null,
   autoClearCache: false,
   displayUnreadCount: false,
   tooltipPayload: null,
