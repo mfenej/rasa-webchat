@@ -399,7 +399,7 @@ class Widget extends Component {
           // storage.clear();
           // Store the received session_id to storage
 
-          storeLocalSession(storage, storage.sessionName, remoteId);
+          storeLocalSession(storage, storage.sessionName, storage.customSessionId?storage.customSessionId:remoteId);
           dispatch(pullSession());
           if (sendInitPayload) {
             this.trySendInitPayload();

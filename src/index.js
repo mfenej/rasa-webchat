@@ -103,6 +103,8 @@ const ConnectedWidget = forwardRef((props, ref) => {
     props.params.storage === 'session' ? sessionStorage : localStorage;
 
   storage.sessionName = props.sessionName;
+  storage.customSessionId = props.customSessionId;
+
 
   if (!store || !store.current) {
     store.current = initStore(
@@ -136,6 +138,7 @@ const ConnectedWidget = forwardRef((props, ref) => {
           showCloseButton={props.showCloseButton}
           showFullScreenButton={props.showFullScreenButton}
           hideWhenNotConnected={props.hideWhenNotConnected}
+          customSessionId={props.customSessionId}
           connectOn={props.connectOn}
           autoClearCache={props.autoClearCache}
           fullScreenMode={props.fullScreenMode}
@@ -190,6 +193,7 @@ ConnectedWidget.propTypes = {
   params: PropTypes.object,
   openLauncherImage: PropTypes.string,
   sessionName: PropTypes.string,
+  customSessionId: PropTypes.string,
   closeImage: PropTypes.string,
   docViewer: PropTypes.bool,
   customComponent: PropTypes.func,
