@@ -1,6 +1,5 @@
-@import "variables.scss";
 
-.#{$namespace}doc-viewer-modal {
+.rw-doc-viewer-modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -9,7 +8,7 @@
   display: block;
 }
 
-.#{$namespace}doc-viewer-modal-body {
+.rw-doc-viewer-modal-body {
   overflow-y: auto;
   border-radius: 5px;
   width: 80vw;
@@ -21,7 +20,7 @@
   animation: doc-viewer-slide-down 0.2s ease;
 }
 
-.#{$namespace}doc-viewer-open-modal-link {
+.rw-doc-viewer-open-modal-link {
   color: $blue-1;
   text-decoration: underline;
   cursor: pointer;
@@ -32,13 +31,13 @@
   font: inherit;
 }
 
-.#{$namespace}doc-viewer-modal-iframe {
+.rw-doc-viewer-modal-iframe {
   height: 100%;
   width: 100%;
   border: none;
 }
 
-.#{$namespace}doc-viewer-modal-fade {
+.rw-doc-viewer-modal-fade {
   opacity: 0.5;
   position: fixed;
   top: 0;
@@ -50,14 +49,14 @@
   animation: appear 0.2s ease;
 }
 
-.#{$namespace}doc-viewer-modal-footer {
+.rw-doc-viewer-modal-footer {
   flex: 0 0 auto;
   border: none;
   text-align: center;
   margin-top: 2vh;
 }
 
-.#{$namespace}doc-viewer-close-modal {
+.rw-doc-viewer-close-modal {
   border-radius: 50%;
   background: #89919b;
   color: white;
@@ -72,7 +71,7 @@
   font-weight: 100;
 }
 
-.#{$namespace}doc-viewer-spinner {
+.rw-doc-viewer-spinner {
   display: inline-block;
   width: 64px;
   height: 64px;
@@ -82,7 +81,7 @@
   transform: translate(-32px, -32px);
   animation: appear .6s ease-in;
 }
-.#{$namespace}doc-viewer-spinner:after {
+.rw-doc-viewer-spinner:after {
   content: " ";
   display: block;
   width: 46px;

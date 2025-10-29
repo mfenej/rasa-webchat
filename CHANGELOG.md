@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://https///compare/v1.0.0...v1.1.0) (2025-10-24)
+
+
+### Features
+
+* add tooltip to header buttons ([a1fb5a3](https://https///commit/a1fb5a3a48f8c02d6c890e5ba38d932f551bdf31))
+* adding clear chat confimation dialog ([724f23a](https://https///commit/724f23ac9ea05ebc71552daff35b256a8815c6c2))
+* adding customTooltip ([74d7675](https://https///commit/74d7675825960a8eb3cdb30e370a408e2ccd581c))
+* adding delete button ([1b3d141](https://https///commit/1b3d141374e5f52c41556312df09661219b89bea))
+* adding feedback ([391d33e](https://https///commit/391d33e8af4910b42c96a3db0981f85f1b165055))
+* adding loader + success/failed status ([d292489](https://https///commit/d29248988b48d86e797c88aa72b9c81be9dea17c))
+
+
+### Bug Fixes
+
+* adding customTooltip ([857b34e](https://https///commit/857b34ede3a4d86fd50e00d9774c3ead02f6c3b3))
+* chatbot adding feedback to multiple answers ([ad7507f](https://https///commit/ad7507f0adc68ec7cfd2aea0dd445fa97484ba98))
+* chatbot send init after deleting chat ([87fa4dc](https://https///commit/87fa4dcc5163c9065acc3d95701cd3af54d3b5b1))
+* chatbot send init after deleting chat ([ab9c4eb](https://https///commit/ab9c4ebc881e50a08fc9e25c120e50078f34209f))
+* delayed message on user submit ([1924a36](https://https///commit/1924a361d0d6fd57abd4f2bd26de1d5a5eb0ad48))
+* feedbackStatus value ([36edcbb](https://https///commit/36edcbb5404f3b75da5db2836467a61c639aa813))
+* fix minimize btn crash ([c99c59d](https://https///commit/c99c59dc8405d0a9ed060d06011716bed5182b4b))
+* hide buttons if no question exist ([01b912e](https://https///commit/01b912ed343b8cf8a4a14181dace7c6b9a6c2c68))
+* hide delayed message on loose connection ([976c1c0](https://https///commit/976c1c0e647d22aa4e76110b1a242614aea2ac01))
+* missing className ([307fc8c](https://https///commit/307fc8c25a6a32d8b39ebfed00195fb5a3c2a5bc))
+* only show tooltip when chat is open ([eaa7847](https://https///commit/eaa784773776d369ca7d428cf286c61a2b7dcd79))
+* only show tooltip when message is unread ([7ae5aed](https://https///commit/7ae5aed44d1e3303fdbd2eee3f7558212f10a710))
+* readme typo ([f0fa78c](https://https///commit/f0fa78c048d71e52b8a8d2c863e8e2269f2fb834))
+* remove feedback from button type reponses ([6cebddb](https://https///commit/6cebddb8bd0a9f20c66cc4f5bbafba9693044d3b))
+* remove problematic module ([2df0d80](https://https///commit/2df0d802190d4fdb4db759e3b3fdacdb3b88fce9))
+* removing scroll to bottom on rerender ([7152bc1](https://https///commit/7152bc1f9a625c4e39a8039224fd3c3f4861748e))
+* request getting sent twice on enter press ([b3d2fa6](https://https///commit/b3d2fa6465b19391212b663c3e78dca352aeafb6))
+* rerender on textarea onChange ([9d8006a](https://https///commit/9d8006afe92a96ec00ed2a6eb66b69744d4a4a88))
+* return back isLast parameter ([72d5be0](https://https///commit/72d5be0966d9ce103d6a4995f99117257d37f43d))
+* send question as string in feedback payload ([f970ce7](https://https///commit/f970ce79dd4b858cc64663e1257a27ccbecf3f2d))
+* senderId value ([f41c0f6](https://https///commit/f41c0f683f3c7fc2c4df3d3846ea54da7aaff9da))
+* senderId value ([1b0fb68](https://https///commit/1b0fb68a2c1407a9b2ed5d67c1f707b92a9244e0))
+* small message width ([b217d82](https://https///commit/b217d829180f39ac36791e0fb37dafdce65dded9))
+* socket io ([4c1562d](https://https///commit/4c1562d5d62df7f70e12910edcbe093e4dc48e80))
+* typing indicator still showing if message is received and unred ([a96f129](https://https///commit/a96f129b0015fcae7f91be01899354d57120e539))
+* update node-sass to support node12+ ([#458](https://https//undefined/issues/458)) ([5070d24](https://https///commit/5070d24410786b2ad4acc632fa81ab6b49441bc7))
+
 ### [1.0.2](https://https///compare/v1.0.1...v1.0.2) (2023-03-07)
 
 

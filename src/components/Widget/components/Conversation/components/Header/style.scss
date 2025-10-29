@@ -1,19 +1,17 @@
-@import "variables.scss";
 
-@import "common.scss";
 
-.#{$namespace}conversation-container {
-  .#{$namespace}header {
-    background-color: $tertiary;
-    color: $white;
+.rw-conversation-container {
+  .rw-header {
+    background-color: #135afe;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     height: 55px;
-    font-family: $fontfamily;
+    font-family: 'Inter', sans-serif;
     position: relative;
-    .#{$namespace}avatar {
+    .rw-avatar {
       all: initial;
       height: 31px;
       width: 31px;
@@ -23,123 +21,123 @@
     }
   }
 
-  .#{$namespace}header.#{$namespace}with-subtitle {
+  .rw-header.rw-with-subtitle {
     height: 70px;
-    .#{$namespace}avatar {
+    .rw-avatar {
       top: 20px;
     }
-    .#{$namespace}title {
+    .rw-title {
       top:11px;
     }
     span {
       bottom: 12px;
       position: absolute;
       left: 22px;
-      &.#{$namespace}with-avatar {
+      &.rw-with-avatar {
         left: 60px;
       }
     }
   }
 
-  .#{$namespace}title {
+  .rw-title {
     font-size: 20px;
     margin: 0;
-    font-family: $fontfamily;
+    font-family: 'Inter', sans-serif;
     position: absolute;
     left: 20px;
     font-weight: 700;
-    &.#{$namespace}with-avatar {
+    &.rw-with-avatar {
       left: 58px;
     }
   }
 
-  .#{$namespace}header-buttons {
+  .rw-header-buttons {
     @include header-buttons-fs;
   }
 
-  .#{$namespace}close-button {
+  .rw-close-button {
     display: none;
   }
 
-  .#{$namespace}toggle-fullscreen-button {
+  .rw-toggle-fullscreen-button {
     @include header-button-fs;
   }
 
-  .#{$namespace}toggle-fullscreen {
+  .rw-toggle-fullscreen {
     @include header-icon-fs;
   }
 
-  .#{$namespace}loading {
+  .rw-loading {
     background-color: $grey-3;
-    color: $white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 5px 0 5px;
-    font-family: $fontfamily;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
   }
 }
 
-&.#{$namespace}widget-embedded {
-  .#{$namespace}header {
+.rw-widget-embedded {
+  .rw-header {
     display: none;
   }
 }
 
-.#{$namespace}full-screen {
+.rw-full-screen {
 
-  .#{$namespace}header {
+  .rw-header {
     @include header-fs;
   }
 
-  .#{$namespace}title {
+  .rw-title {
     @include title-fs;
   }
 
-  .#{$namespace}close-button,
-  .#{$namespace}toggle-fullscreen-button {
+  .rw-close-button,
+  .rw-toggle-fullscreen-button {
     @include header-button-fs;
   }
 
-  .#{$namespace}close,
-  .#{$namespace}toggle-fullscreen {
+  .rw-close,
+  .rw-toggle-fullscreen {
     @include header-icon-fs;
   }
 
-  .#{$namespace}loading {
+  .rw-loading {
     @include loading-fs;
   }
-  &.#{$namespace}widget-container{
-    .#{$namespace}conversation-container{
+  &.rw-widget-container{
+    .rw-conversation-container{
     margin-bottom: 0px;
 }}
   
 }
 
 @media screen and (max-width: 800px) {
-  .#{$namespace}conversation-container {
-    .#{$namespace}header {
+  .rw-conversation-container {
+    .rw-header {
       @include header-fs;
     }
 
-    .#{$namespace}title {
+    .rw-title {
       @include title-fs;
     }
 
-    .#{$namespace}close-button {
+    .rw-close-button {
       @include header-button-fs;
     }
 
-    .#{$namespace}close {
+    .rw-close {
       @include header-icon-fs;
     }
 
-    .#{$namespace}toggle-fullscreen-button, .#{$namespace}w-.toggle-fullscreen {
+    .rw-toggle-fullscreen-button, .rw-w-.toggle-fullscreen {
       display: none;
     }
 
-    .#{$namespace}loading {
+    .rw-loading {
       @include loading-fs;
     }
   }

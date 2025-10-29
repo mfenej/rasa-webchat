@@ -1,7 +1,6 @@
 import socketio from './socket-socketio';
-import sockjs from './socket-sockjs';
 
-const PROTOCOLS = { socketio, sockjs };
+const PROTOCOLS = { socketio };
 export default function (socketUrl, customData, path, protocol, protocolOptions) {
   protocol = protocol || 'socketio';
   const socketProtocol = PROTOCOLS[protocol];

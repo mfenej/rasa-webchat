@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { PROP_TYPES } from 'constants';
 
 import './styles.scss';
 
@@ -18,8 +17,5 @@ class VidReply extends PureComponent {
   }
 }
 
-VidReply.propTypes = {
-  message: PROP_TYPES.VIDREPLY
-};
 
 export default VidReply;

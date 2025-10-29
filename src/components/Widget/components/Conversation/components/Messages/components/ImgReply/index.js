@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { PROP_TYPES } from 'constants';
 
 import './styles.scss';
 
@@ -39,12 +38,5 @@ class ImgReply extends PureComponent {
   }
 }
 
-ImgReply.propTypes = {
-  message: PROP_TYPES.IMGREPLY
-};
-
-ImgReply.defaultProps = {
-  params: {}
-};
 
 export default ImgReply;

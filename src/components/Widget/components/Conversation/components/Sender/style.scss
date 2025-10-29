@@ -1,24 +1,22 @@
-@import "variables.scss";
 
-@import "common.scss";
 
-.#{$namespace}conversation-container {
-  .#{$namespace}sender {
+.rw-conversation-container {
+  .rw-sender {
     align-items: center;
     display: flex;
-    background-color: $grey-2;
+    background-color: #f4f7f9;
     min-height: 30px;
     padding: 15px 5px;
    
   }
   
-  .#{$namespace}new-message {
+  .rw-new-message {
     font-size: 1em;
     width: 100%;
     border: 0;
-    background-color: $grey-2;
+    background-color: #f4f7f9;
     padding-left: 15px;
-    font-family: $fontfamily;
+    font-family: 'Inter', sans-serif;
     resize: none;
     &:focus {
       outline: none;
@@ -26,23 +24,23 @@
   }
   
   
-  .#{$namespace}send {
-    background: $grey-2;
+  .rw-send {
+    background: #f4f7f9;
     border: 0;
     
-    .#{$namespace}send-icon {
+    .rw-send-icon {
       fill: #00000000;;
       transition: fill 0.35s;
     }
 
-    .#{$namespace}send-icon-ready {
+    .rw-send-icon-ready {
       fill: #135afe;
       transition: fill 0.35s;
     }
   }
   
   @media screen and (max-width: 800px)  {
-    .#{$namespace}sender {
+    .rw-sender {
       border-radius: 0;
       flex-shrink: 0;
     }
@@ -50,8 +48,8 @@
   
 }
 
-.#{$namespace}widget-embedded {
-  .#{$namespace}sender {
+.rw-widget-embedded {
+  .rw-sender {
     flex: 0, 0, auto;
     min-height: 35px;
   }

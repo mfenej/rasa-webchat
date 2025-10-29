@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import ThemeContext from '../src/components/Widget/ThemeContext';
 
@@ -25,8 +24,6 @@ function Send({ ready }) {
 }
 
 
-Send.propTypes = {
-  ready: PropTypes.bool
-};
+
 
 export default Send;

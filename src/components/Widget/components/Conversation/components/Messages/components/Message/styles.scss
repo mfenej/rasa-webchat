@@ -1,19 +1,17 @@
-@import "variables.scss";
 
-@import "common.scss";
 
-.#{$namespace}conversation-container {
+.rw-conversation-container {
   
-  .#{$namespace}message {
+  .rw-message {
     margin: 10px;
     font-size: 16px;
     line-height: 20px;
     display: flex;
-    font-family: $fontfamily;
+    font-family: 'Inter', sans-serif;
     flex-wrap: wrap;
     position: relative;
   
-    .#{$namespace}markdown {
+    .rw-markdown {
       p {
         margin: 0;
       }
@@ -23,9 +21,9 @@
     }
   }
   
-  .#{$namespace}client {
-    @include message-bubble($blue-1, $white);
-    background-color: $tertiary ;
+  .rw-client {
+    @include message-bubble($blue-1, #fff);
+    background-color: #135afe ;
     max-width: 85%;
     margin-left: auto;
     overflow-wrap: break-word;
@@ -34,15 +32,15 @@
     }
   }
   
-  .#{$namespace}response {
-    @include message-bubble($grey-2, #000, 0 15px 15px 15px);
+  .rw-response {
+    @include message-bubble(#f4f7f9, #000, 0 15px 15px 15px);
     overflow-wrap: break-word;
   }
   
   /* For markdown elements created with default styles */
-  .#{$namespace}message-text {
+  .rw-message-text {
     margin: 0;
-    .#{$namespace}markdown{
+    .rw-markdown{
       p{
         margin-bottom: 1em;
         &:last-child{

@@ -1,7 +1,6 @@
-@import "variables.scss";
 
-.#{$namespace}launcher {
-  .#{$namespace}badge{
+.rw-launcher {
+  .rw-badge{
     position: fixed;
     top: -10px;
     right: -5px;

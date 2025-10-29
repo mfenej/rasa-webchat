@@ -1,6 +1,4 @@
 import React, { Component,createRef } from 'react';
-import PropTypes from 'prop-types';
-import ImmutablePropTypes from 'react-immutable-proptypes';
 import { connect } from 'react-redux';
 import { MESSAGES_TYPES } from 'constants';
 import { Video, Image, Message, Carousel, Buttons } from 'messagesComponents';
@@ -204,13 +202,7 @@ class Messages extends Component {
   }
 }
 Messages.contextType = ThemeContext;
-Messages.propTypes = {
-  messages: ImmutablePropTypes.listOf(ImmutablePropTypes.map),
-  profileAvatar: PropTypes.string,
-  customComponent: PropTypes.func,
-  showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
-  displayTypingIndication: PropTypes.bool
-};
+
 
 Message.defaultTypes = {
   displayTypingIndication: false

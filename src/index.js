@@ -1,6 +1,5 @@
 import React, { forwardRef, useRef } from 'react';
 
-import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 
 import Widget from './components/Widget';
@@ -174,57 +173,6 @@ const ConnectedWidget = forwardRef((props, ref) => {
   );
 });
 
-ConnectedWidget.propTypes = {
-  initPayload: PropTypes.string,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  protocol: PropTypes.string,
-  socketUrl: PropTypes.string.isRequired,
-  socketPath: PropTypes.string,
-  protocolOptions: PropTypes.shape({}),
-  customData: PropTypes.shape({}),
-  handleNewUserMessage: PropTypes.func,
-  profileAvatar: PropTypes.string,
-  inputTextFieldHint: PropTypes.string,
-  connectingText: PropTypes.string,
-  showCloseButton: PropTypes.bool,
-  showFullScreenButton: PropTypes.bool,
-  hideWhenNotConnected: PropTypes.bool,
-  connectOn: PropTypes.oneOf(['mount', 'open']),
-  autoClearCache: PropTypes.bool,
-  onSocketEvent: PropTypes.objectOf(PropTypes.func),
-  fullScreenMode: PropTypes.bool,
-  badge: PropTypes.number,
-  embedded: PropTypes.bool,
-  // eslint-disable-next-line react/forbid-prop-types
-  params: PropTypes.object,
-  openLauncherImage: PropTypes.string,
-  sessionName: PropTypes.string,
-  customSessionId: PropTypes.string,
-  closeImage: PropTypes.string,
-  docViewer: PropTypes.bool,
-  customComponent: PropTypes.func,
-  displayUnreadCount: PropTypes.bool,
-  showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
-  customMessageDelay: PropTypes.func,
-  tooltipPayload: PropTypes.string,
-  tooltipDelay: PropTypes.number,
-  onWidgetEvent: PropTypes.shape({
-    onChatOpen: PropTypes.func,
-    onChatClose: PropTypes.func,
-    onChatVisible: PropTypes.func,
-    onChatHidden: PropTypes.func
-  }),
-  disableTooltips: PropTypes.bool,
-  defaultHighlightCss: PropTypes.string,
-  defaultHighlightAnimation: PropTypes.string,
-  mainColor: PropTypes.string,
-  conversationBackgroundColor: PropTypes.string,
-  userTextColor: PropTypes.string,
-  userBackgroundColor: PropTypes.string,
-  assistTextColor: PropTypes.string,
-  assistBackgoundColor: PropTypes.string
-};
 
 ConnectedWidget.defaultProps = {
   title: 'Welcome',

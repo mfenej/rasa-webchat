@@ -1,15 +1,12 @@
-@import "variables.scss";
 
-@import "common.scss";
-
-.#{$namespace}conversation-container {
-  .#{$namespace}image-details {
+.rw-conversation-container {
+  .rw-image-details {
     object-fit: scale-down;
     max-width: 100%;
     margin-top: 10px;
   }
   
-  .#{$namespace}image-frame {
+  .rw-image-frame {
     object-position: 0 0;
     object-fit: cover;
     width: 100%;

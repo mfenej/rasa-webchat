@@ -1,9 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Map } from 'immutable';
-import ImmutablePropTypes from 'react-immutable-proptypes';
 import { usePopper } from 'react-popper';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -233,20 +231,7 @@ const Launcher = ({
   );
 };
 
-Launcher.propTypes = {
-  toggle: PropTypes.func,
-  isChatOpen: PropTypes.bool,
-  badge: PropTypes.number,
-  fullScreenMode: PropTypes.bool,
-  openLauncherImage: PropTypes.string,
-  closeImage: PropTypes.string,
-  unreadCount: PropTypes.number,
-  displayUnreadCount: PropTypes.bool,
-  showTooltip: PropTypes.bool,
-  lastUserMessage: PropTypes.oneOfType([ImmutablePropTypes.map, PropTypes.bool]),
-  domHighlight: PropTypes.shape({}),
-  lastMessages: PropTypes.arrayOf(ImmutablePropTypes.map)
-};
+
 
 const mapStateToProps = state => ({
   lastMessages: (state.messages && (() => {

@@ -2,23 +2,23 @@
 
 @import "common.scss";
 
-.#{$namespace}conversation-container {
-  .#{$namespace}snippet {
-    @include message-bubble($grey-2, #000);
+.rw-conversation-container {
+  .rw-snippet {
+    @include message-bubble(#f4f7f9, #000);
   }
   
-  .#{$namespace}snippet-title {
+  .rw-snippet-title {
     margin: 0;
   }
   
-  .#{$namespace}snippet-details {
+  .rw-snippet-details {
     border-left: 2px solid $green-1;
     margin-top: 5px;
     padding-left: 10px;
   }
   
-  .#{$namespace}link {
-    font-family: $fontfamily;
+  .rw-link {
+    font-family: 'Inter', sans-serif;
   }
 }
 

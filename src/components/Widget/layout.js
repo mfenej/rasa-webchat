@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import Conversation from './components/Conversation';
 import Launcher from './components/Launcher';
@@ -80,32 +79,6 @@ const mapStateToProps = state => ({
   connectingText: state.behavior.get('connectingText')
 });
 
-WidgetLayout.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  onSendMessage: PropTypes.func,
-  toggleChat: PropTypes.func,
-  toggleFullScreen: PropTypes.func,
-  isChatOpen: PropTypes.bool,
-  isChatVisible: PropTypes.bool,
-  profileAvatar: PropTypes.string,
-  showCloseButton: PropTypes.bool,
-  showFullScreenButton: PropTypes.bool,
-  hideWhenNotConnected: PropTypes.bool,
-  disabledInput: PropTypes.bool,
-  fullScreenMode: PropTypes.bool,
-  badge: PropTypes.number,
-  embedded: PropTypes.bool,
-  inputTextFieldHint: PropTypes.string,
-  params: PropTypes.object,
-  connected: PropTypes.bool,
-  connectingText: PropTypes.string,
-  openLauncherImage: PropTypes.string,
-  closeImage: PropTypes.string,
-  customComponent: PropTypes.func,
-  displayUnreadCount: PropTypes.bool,
-  showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
-  tooltipPayload: PropTypes.string
-};
+
 
 export default connect(mapStateToProps)(WidgetLayout);

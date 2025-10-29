@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { PROP_TYPES } from 'constants';
 import { addUserMessage, emitUserMessage, setButtons, toggleInputDisabled } from 'actions';
 import Message from '../Message/index';
 
@@ -129,13 +127,6 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-Buttons.propTypes = {
-  getChosenReply: PropTypes.func,
-  chooseReply: PropTypes.func,
-  id: PropTypes.number,
-  isLast: PropTypes.bool,
-  message: PROP_TYPES.BUTTONS,
-  linkTarget: PropTypes.string
-};
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Buttons);

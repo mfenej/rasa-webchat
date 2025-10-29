@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import Portal from 'utils/portal';
 import './style.scss';
@@ -82,8 +81,5 @@ class DocViewer extends Component {
   }
 }
 
-DocViewer.propTypes = {
-  src: PropTypes.string.isRequired
-};
 
 export default DocViewer;

@@ -1,14 +1,20 @@
 /* eslint-disable no-mixed-operators */
 /* eslint-disable prefer-rest-params */
 /* eslint-disable class-methods-use-this */
-import hash from 'object-hash';
-
 import QuestionMark from './question-solid.svg';
 import { onRemove } from './utils';
 
 const LOCAL_STORAGE_ACCESS_STRING = 'rasaWebchatPro';
 export const RULES_HANDLER_SINGLETON = 'rasaWebchatRulesHandler';
-
+function simpleHash(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash); // Return a positive number
+}
 export default class RulesHandler {
   constructor(rules, sendMethod, triggerEventListenerUpdateRate = 500) {
     this.url = window.location.host + window.location.pathname;
@@ -81,7 +87,7 @@ export default class RulesHandler {
   storeRuleHash(rule) {
     // We remove the payload and text so that they're not part of the rule when we
     // compute if it has already been ran or not.
-    const rulesHash = hash(rule.trigger);
+    const rulesHash = simpleHash(JSON.stringify(rule.trigger));
 
     // We store the hash on the rule object so that it can be used
     // further down the line.

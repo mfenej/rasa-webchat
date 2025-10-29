@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import TextareaAutosize from 'react-textarea-autosize';
 import Send from 'assets/send_button';
@@ -233,11 +232,6 @@ const mapStateToProps = state => ({
   userInput: state.metadata.get('userInput')
 });
 
-Sender.propTypes = {
-  sendMessage: PropTypes.func,
-  inputTextFieldHint: PropTypes.string,
-  disabledInput: PropTypes.bool,
-  userInput: PropTypes.string
-};
+
 
 export default connect(mapStateToProps)(Sender);

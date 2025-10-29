@@ -1,8 +1,7 @@
-@import 'variables.scss';
-@import 'common.scss';
 
-.#{$namespace}carousel-container {
-    // @include message-bubble($grey-2, #000);
+
+.rw-carousel-container {
+    // @include message-bubble(#f4f7f9, #000);
     //max-height: 345px;
     min-height: 345px;
     padding-bottom: 10px;
@@ -15,7 +14,7 @@
     position: relative;
     display: flex;
 
-    .#{$namespace}carousel-card {
+    .rw-carousel-card {
         display: inline-block;
         max-width: 220px;
         width: 220px;
@@ -27,7 +26,7 @@
         overflow: hidden;
         position: relative;
 
-        .#{$namespace}carousel-card-image {
+        .rw-carousel-card-image {
             width: 100%;
             height: 150px;
             object-fit: cover;
@@ -37,7 +36,7 @@
             cursor: pointer;
         }
 
-        .#{$namespace}carousel-card-title {
+        .rw-carousel-card-title {
             display: block;
             margin: 7px 10px 2px 9px;
             font-weight: 500;
@@ -48,7 +47,7 @@
             color: inherit;
         }
 
-        .#{$namespace}carousel-card-subtitle {
+        .rw-carousel-card-subtitle {
             display: block;
             margin: 0 9px 8px 9px;
             opacity: 0.5;
@@ -61,10 +60,10 @@
             color: inherit;
         }
 
-        .#{$namespace}carousel-buttons-container {
+        .rw-carousel-buttons-container {
             margin-bottom: 1.5rem;
             width: 100%;
-            .#{$namespace}reply {
+            .rw-reply {
                 min-height: 21px;
                 margin: 5px 10px;
                 font-size: 0.9em;
@@ -80,7 +79,7 @@
     }
 }
 
-.#{$namespace}carousel-arrows-container {
+.rw-carousel-arrows-container {
     max-height: 345px;
     height: 345px;
     width: 100%;
@@ -90,7 +89,7 @@
     position: absolute;
     pointer-events: none;
 
-    .#{$namespace}carousel-arrow {
+    .rw-carousel-arrow {
         pointer-events: initial;
         position: absolute;
         width: 30px;
@@ -110,7 +109,7 @@
             top: calc(40% - 2px);
         }
         outline: none;
-        img.#{$namespace}arrow {
+        img.rw-arrow {
             position: absolute;
             height: 100%;
             left: 3px;
@@ -118,13 +117,13 @@
     }
 
 
-    .#{$namespace}left-arrow {
+    .rw-left-arrow {
         left: 10px;
     }
 
-    .#{$namespace}right-arrow {
+    .rw-right-arrow {
         right: 10px;
-        div.#{$namespace}arrow {
+        div.rw-arrow {
             transform: rotate(180deg);
         }
     }

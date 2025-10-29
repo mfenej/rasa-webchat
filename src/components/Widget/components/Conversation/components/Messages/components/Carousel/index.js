@@ -1,9 +1,7 @@
 import React, { useRef, useState, useContext } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import { addUserMessage, emitUserMessage } from 'actions';
-import { PROP_TYPES } from 'constants';
 import Arrow from 'assets/arrow';
 import ThemeContext from '../../../../../../ThemeContext';
 
@@ -164,13 +162,6 @@ const Carousel = (props) => {
 };
 
 
-Carousel.propTypes = {
-  message: PROP_TYPES.CAROUSEL,
-  // completely bugged, it's actually used in handle click
-  // eslint-disable-next-line react/no-unused-prop-types
-  chooseReply: PropTypes.func.isRequired,
-  linkTarget: PropTypes.string
-};
 
 const mapStateToProps = state => ({
   linkTarget: state.metadata.get('linkTarget')

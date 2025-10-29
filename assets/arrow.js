@@ -1,6 +1,5 @@
 
 
-import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import ThemeContext from '../src/components/Widget/ThemeContext';
 
@@ -30,8 +29,6 @@ function Arrow() {
 }
 
 
-Arrow.propTypes = {
-  ready: PropTypes.bool
-};
+
 
 export default Arrow;

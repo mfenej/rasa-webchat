@@ -1,8 +1,7 @@
-@import "variables.scss";
-@import "common.scss";
 
-.#{$namespace}group-message.#{$namespace}from-client {
-  span.#{$namespace}message-date {
+
+.rw-group-message.rw-from-client {
+  span.rw-message-date {
     text-align: right;
     flex-basis: 100%;
     margin-left: 0;
@@ -13,8 +12,8 @@
   }
 }
 
-.#{$namespace}group-message.#{$namespace}from-response {
-  span.#{$namespace}message-date {
+.rw-group-message.rw-from-response {
+  span.rw-message-date {
     text-align: left;
     flex-basis: 100%;
     margin-left: 7px;
@@ -23,45 +22,45 @@
     color: #a4a7ab;
   }
   // When we have several messages, the first one of the group
-  .#{$namespace}message:first-child:not(:only-child) {
-    .#{$namespace}response {
+  .rw-message:first-child:not(:only-child) {
+    .rw-response {
       border-radius: 0 15px 15px 0;
     }
     margin-bottom: 2px;
   }
   // When we have several messages, messages that are neither the first, nor the last
-  .#{$namespace}message:not(:first-child):not(:last-child):not(:last-child) {
-    .#{$namespace}response {
+  .rw-message:not(:first-child):not(:last-child):not(:last-child) {
+    .rw-response {
       border-radius: 0 15px 15px 0;
     }
     margin-top: 2px;
     margin-bottom: 2px;
   }
   // every message in a group that is NOT the first
-  .#{$namespace}message:not(:first-child):not(:only-child) {
-    .#{$namespace}avatar {
+  .rw-message:not(:first-child):not(:only-child) {
+    .rw-avatar {
       display: none;
     }
-    &.#{$namespace}with-avatar {
+    &.rw-with-avatar {
       margin-left: 33px;
     }
   }
   // When we have several messages, the last one of the group
-  .#{$namespace}message:last-child:not(:only-child) {
+  .rw-message:last-child:not(:only-child) {
     margin-top: 2px;
   }
 }
 
-.#{$namespace}message.#{$namespace}typing-indication {
-  .#{$namespace}response {
+.rw-message.rw-typing-indication {
+  .rw-response {
     box-sizing: content-box;
     height: 16px;
   }
 }
 
 
-.#{$namespace}messages-container {
-  background-color: $white;
+.rw-messages-container {
+  background-color: #fff;
   height: 50vh;
   max-height: 425px;
   overflow-y: auto;
@@ -72,22 +71,22 @@
   padding-top: 10px;
 }
 
-.#{$namespace}widget-embedded {
-  .#{$namespace}messages-container {
+.rw-widget-embedded {
+  .rw-messages-container {
     height: 100%;
     max-height: 100%;
   }
 }
 
-.#{$namespace}full-screen {
+.rw-full-screen {
 
-  .#{$namespace}messages-container {
+  .rw-messages-container {
     @include messages-container-fs;
   }
 }
 
 @media screen and (max-width: 800px)  {
-  .#{$namespace}messages-container {
+  .rw-messages-container {
     @include messages-container-fs;
   }
 }
@@ -99,7 +98,7 @@ div#wave {
   height:13px;
   margin-left: auto;
   margin-right: auto;
-  .#{$namespace}dot {
+  .rw-dot {
     opacity: 0.4;
     display:inline-block;
     width:5px;

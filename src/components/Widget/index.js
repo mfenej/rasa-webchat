@@ -1,7 +1,5 @@
-import ImmutablePropTypes from 'react-immutable-proptypes';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import * as actions from '../../store/actions/index';
 import {
   toggleFullScreen,
@@ -665,77 +663,5 @@ const mapStateToProps = state => ({
   messages: state.messages
 });
 
-Widget.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  customData: PropTypes.shape({}),
-  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  initPayload: PropTypes.string,
-  profileAvatar: PropTypes.string,
-  showCloseButton: PropTypes.bool,
-  showFullScreenButton: PropTypes.bool,
-  hideWhenNotConnected: PropTypes.bool,
-  connectOn: PropTypes.oneOf(['mount', 'open']),
-  autoClearCache: PropTypes.bool,
-  fullScreenMode: PropTypes.bool,
-  isChatVisible: PropTypes.bool,
-  isChatOpen: PropTypes.bool,
-  badge: PropTypes.number,
-  socket: PropTypes.shape({}),
-  embedded: PropTypes.bool,
-  params: PropTypes.shape({}),
-  connected: PropTypes.bool,
-  initialized: PropTypes.bool,
-  openLauncherImage: PropTypes.string,
-  sessionName: PropTypes.string,
-  customSessionId: PropTypes.string,
-  closeImage: PropTypes.string,
-  inputTextFieldHint: PropTypes.string,
-  customComponent: PropTypes.func,
-  displayUnreadCount: PropTypes.bool,
-  showMessageDate: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
-  customMessageDelay: PropTypes.func.isRequired,
-  tooltipPayload: PropTypes.string,
-  tooltipSent: PropTypes.shape({}),
-  tooltipDelay: PropTypes.number.isRequired,
-  domHighlight: PropTypes.shape({}),
-  storage: PropTypes.shape({}),
-  disableTooltips: PropTypes.bool,
-  defaultHighlightAnimation: PropTypes.string,
-  defaultHighlightCss: PropTypes.string,
-  defaultHighlightClassname: PropTypes.string,
-  messages: ImmutablePropTypes.listOf(ImmutablePropTypes.map)
-};
-
-Widget.defaultProps = {
-  isChatOpen: false,
-  isChatVisible: true,
-  fullScreenMode: false,
-  connectOn: 'mount',
-  sessionName: 'chat_session',
-  customSessionId: null,
-  autoClearCache: false,
-  displayUnreadCount: false,
-  tooltipPayload: null,
-  inputTextFieldHint: 'Type a message...',
-  oldUrl: '',
-  disableTooltips: false,
-  defaultHighlightClassname: '',
-  defaultHighlightCss: 'animation: 0.5s linear infinite alternate default-botfront-blinker-animation; outline-style: solid;',
-  // unfortunately it looks like outline-style is not an animatable property on Safari
-  defaultHighlightAnimation: `@keyframes default-botfront-blinker-animation {
-    0% {
-      outline-color: rgba(0,255,0,0);
-    }
-    49% {
-      outline-color: rgba(0,255,0,0);
-    }
-    50% {
-      outline-color:green;
-    }
-    100% {
-      outline-color: green;
-    }
-  }`
-};
 
 export default connect(mapStateToProps, null, null, { forwardRef: true })(Widget);

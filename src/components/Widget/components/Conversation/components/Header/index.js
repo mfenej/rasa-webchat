@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import PropTypes from 'prop-types';
 
 import close from 'assets/clear-button.svg';
 import fullscreen from 'assets/fullscreen_button.svg';
@@ -155,18 +154,5 @@ const  Header = ({
     </div>);
 };
 
-Header.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  fullScreenMode: PropTypes.bool,
-  toggleFullScreen: PropTypes.func,
-  toggleChat: PropTypes.func,
-  showCloseButton: PropTypes.bool,
-  showFullScreenButton: PropTypes.bool,
-  connected: PropTypes.bool,
-  connectingText: PropTypes.string,
-  closeImage: PropTypes.string,
-  profileAvatar: PropTypes.string
-};
 
 export default Header;

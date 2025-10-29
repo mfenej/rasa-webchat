@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { PROP_TYPES } from 'constants';
 
 import './styles.scss';
 
@@ -22,8 +21,6 @@ class Snippet extends PureComponent {
   }
 }
 
-Snippet.propTypes = {
-  message: PROP_TYPES.SNIPPET
-};
+
 
 export default Snippet;

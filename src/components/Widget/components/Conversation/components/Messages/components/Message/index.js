@@ -1,12 +1,9 @@
 import React, { PureComponent } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
-import { PROP_TYPES } from 'constants';
 import DocViewer from '../docViewer';
 import './styles.scss';
-import ThemeContext from '../../../../../../ThemeContext';
 
 class Message extends PureComponent {
   render() {
@@ -87,12 +84,7 @@ class Message extends PureComponent {
   }
 }
 
-Message.contextType = ThemeContext;
-Message.propTypes = {
-  message: PROP_TYPES.MESSAGE,
-  docViewer: PropTypes.bool,
-  linkTarget: PropTypes.string
-};
+
 
 Message.defaultTypes = {
   docViewer: false,
