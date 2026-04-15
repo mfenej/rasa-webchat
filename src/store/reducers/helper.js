@@ -4,10 +4,11 @@ import { MESSAGES_TYPES, MESSAGE_SENDER } from 'constants';
 import { Video, Image, Message, Carousel, Buttons } from 'messagesComponents';
 
 export function createNewMessage(text, sender, nextMessageIsTooltip, hidden) {
+  const isPayloadObject = typeof text === 'object' && text !== null && text?.message !== undefined;
   return Map({
     type: MESSAGES_TYPES.TEXT,
     component: Message,
-    text,
+    text:isPayloadObject?text?.message:text,
     sender,
     showAvatar: sender === MESSAGE_SENDER.RESPONSE,
     timestamp: new Date().getTime(),
