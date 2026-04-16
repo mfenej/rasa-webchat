@@ -4,7 +4,7 @@ import { MESSAGES_TYPES, MESSAGE_SENDER } from 'constants';
 import { Video, Image, Message, Carousel, Buttons } from 'messagesComponents';
 
 export function createNewMessage(text, sender, nextMessageIsTooltip, hidden) {
-  const isPayloadObject = typeof text === 'object' && text !== null && text?.message !== undefined;
+  const isPayloadObject = typeof text === 'object' && text !== null && text?.message !== undefined && text?.audio_message !== true;
   return Map({
     type: MESSAGES_TYPES.TEXT,
     component: Message,
